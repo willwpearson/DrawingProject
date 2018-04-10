@@ -55,13 +55,30 @@ public class DrawingCanvas extends JPanel
 		
 	}
 	
+	public void changeBackground()
+	{
+		
+	}
+	
 	public void save()
 	{
 		
 	}
 	
-	public void changeBackground()
+	private Color randomColor()
+	{
+		return null;
+	}
+	
+	private void updateImage()
 	{
 		
+	}
+	
+	@Override
+	protected void paintComponent(Graphics graphics)
+	{
+		super.paintComponent(graphics);
+		graphics.drawImage(canvasImage, 0, 0, null);
 	}
 }

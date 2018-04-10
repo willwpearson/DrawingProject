@@ -184,6 +184,18 @@ public class ArtPanel extends JPanel
 				}
 			}
 		});
+		
+		edgeSlider.addChangeListener(new ChangeListener() 
+		{
+			@Override
+			public void stateChanged(ChangeEvent e)
+			{
+				if(!edgeSlider.getValueIsAdjusting())
+				{
+					currentScale = edgeSlider.getValue();
+				}
+			}
+		});
 	}
 	
 	private boolean coinFlip()

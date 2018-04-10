@@ -153,7 +153,7 @@ public class ArtPanel extends JPanel
 		{
 			public void actionPerformed(ActionEvent click)
 			{
-				Polygon polygon = createPolygon();
+				Polygon polygon = createPolygon(currentEdgeCount);
 				canvas.addShape(polygon);
 			}
 		});
@@ -164,6 +164,24 @@ public class ArtPanel extends JPanel
 			{
 				Ellipse2D ellipse = createEllipse();
 				canvas.addShape(ellipse);
+			}
+		});
+		
+		clearButton.addActionListener(click -> canvas.clear());
+		
+		saveButton.addActionListener(click -> canvas.save());
+		
+		colorButton.addActionListener(click -> canvas.changeBackground());
+		
+		scaleSlider.addChangeListener(new ChangeListener() 
+		{
+			@Override
+			public void stateChanged(ChangeEvent e)
+			{
+				if(!scaleSlider.getValueIsAdjusting())
+				{
+					currentScale = scaleSlider.getValue();
+				}
 			}
 		});
 	}

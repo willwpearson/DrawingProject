@@ -44,4 +44,24 @@ public class DrawingCanvas extends JPanel
 		this.setPreferredSize(new Dimension(600, 600));
 		this.setMaximumSize(getPreferredSize());
 	}
+	
+	public void addShape(Shape shape)
+	{
+		
+	}
+	
+	public void clear()
+	{
+		
+	}
+	
+	public void save()
+	{
+		
+	}
+	
+	public void changeBackground()
+	{
+		
+	}
 }

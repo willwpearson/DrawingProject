@@ -209,7 +209,10 @@ public class ArtPanel extends JPanel
 		{
 			public void mouseDragged(MouseEvent drag)
 			{
+				int x = drag.getX();
+				int y = drag.getY();
 				
+				canvas.drawOnCanvas(x, y);
 			}
 					
 			@Override

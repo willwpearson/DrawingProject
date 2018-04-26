@@ -1,6 +1,8 @@
 package art.controller;
 
+import javax.swing.JOptionPane;
 import art.view.ArtFrame;
+
 
 public class ArtController
 {
@@ -18,7 +20,7 @@ public class ArtController
 	
 	public void handleErrors(Exception error)
 	{
-		
+		JOptionPane.showMessageDialog(appFrame, error.getMessage());
 	}
 	
 	public ArtFrame getFrame()

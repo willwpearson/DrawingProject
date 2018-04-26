@@ -15,4 +15,14 @@ public class ArtController
 	{
 		
 	}
+	
+	public void handleErrors(Exception error)
+	{
+		
+	}
+	
+	public ArtFrame getFrame()
+	{
+		return appFrame;
+	}
 }

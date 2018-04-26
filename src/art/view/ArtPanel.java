@@ -204,6 +204,19 @@ public class ArtPanel extends JPanel
 				}
 			}
 		});
+		
+		canvas.addMouseMotionListener(new MouseMotionListener()
+		{
+			public void mouseDragged(MouseEvent drag)
+			{
+				
+			}
+					
+			@Override
+			public void mouseMoved(MouseEvent move)
+			{
+			}
+		});
 	}
 	
 	private boolean coinFlip()

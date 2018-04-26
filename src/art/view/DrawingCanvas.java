@@ -94,7 +94,7 @@ public class DrawingCanvas extends JPanel
 	public void drawOnCanvas(int xPosition, int yPosition, int lineWidth)
 	{
 		Graphics2D current = canvasImage.createGraphics();
-		current.setPaint(randomColor());
+		current.setPaint(Color.BLACK);
 		current.setStroke((new BasicStroke(lineWidth)));
 		
 		if(previousX == Integer.MIN_VALUE)

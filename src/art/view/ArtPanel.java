@@ -200,7 +200,7 @@ public class ArtPanel extends JPanel
 			{
 				if(!edgeSlider.getValueIsAdjusting())
 				{
-					currentScale = edgeSlider.getValue();
+					currentEdgeCount = edgeSlider.getValue();
 				}
 			}
 		});
@@ -212,12 +212,39 @@ public class ArtPanel extends JPanel
 				int x = drag.getX();
 				int y = drag.getY();
 				
-				canvas.drawOnCanvas(x, y);
+				canvas.drawOnCanvas(x, y, currentEdgeCount);
 			}
 					
 			@Override
 			public void mouseMoved(MouseEvent move)
 			{
+			}
+		});
+		
+		canvas.addMouseListener(new MouseListener() 
+		{
+			@Override
+			public void mouseClicked(MouseEvent e)
+			{}
+			
+			@Override
+			public void mousePressed(MouseEvent e)
+			{}
+			
+			@Override
+			public void mouseReleased(MouseEvent e)
+			{
+				canvas.resetPoint();
+			}
+			
+			@Override
+			public void mouseEntered(MouseEvent e)
+			{}
+			
+			@Override
+			public void mouseExited(MouseEvent e)
+			{
+				canvas.resetPoint();
 			}
 		});
 	}
